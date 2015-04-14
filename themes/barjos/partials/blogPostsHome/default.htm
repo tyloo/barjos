@@ -1,0 +1,63 @@
+{% set posts = __SELF__.posts %}
+
+<h1>Actualités</h1>
+<hr>
+
+{% for post in posts %}
+    <article class="post">
+        <!-- Post Top (Image and Metadata) -->
+        {% if post.featured_images.0 %}
+            <figure>
+                <a href="{{ post.url }}"><img src="{{ post.featured_images.0.path }}" alt=""></a>
+                <figcaption>
+                    <h2>{{ post.title }}</h2>
+                    <div class="post-date">
+                        Posté
+                        {% if post.categories.count %} dans {% endif %}
+                        {% for category in post.categories %}
+                        <a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
+                        {% endfor %}
+                        le {{ post.published_at|date('d/m/Y') }}
+                    </div>
+                </figcaption>
+            </figure>
+        {% else %}
+            <div class="post-title">
+                <h2>{{ post.title }}</h2>
+                <div class="post-date">
+                    Posté
+                    {% if post.categories.count %} dans {% endif %}
+                    {% for category in post.categories %}
+                    <a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                    le {{ post.published_at|date('d/m/Y') }}
+                </div>
+            </div>
+        {% endif %}
+        <!-- /Post Top (Image and Metadata) -->
+
+        <!-- Post Content -->
+        {% if post.excerpt %}
+            <p class="excerpt">
+                {{ post.excerpt }}
+            </p>
+        {% else %}
+            <div class="content">
+                {{ post.content_html|raw }}
+            </div>
+        {% endif %}
+        <a href="{{ post.url }}">En savoir plus...</a>
+        <!-- /Post Content -->
+    </article>
+    <hr>
+{% else %}
+    {{ noPostsMessage }}
+{% endfor %}
+
+<!-- View All Button -->
+<div class="blogpager">
+    <div class="previous">
+        <a href="{{ '/news'|app }}" class="button next-prev">Tout voir</a>
+    </div>
+</div>
+<!-- /View All Button -->

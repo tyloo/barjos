@@ -1,0 +1,508 @@
+/*
+Stylesheet Guide
+----------------
+
+GENERAL STYLES
+FLEXSLIDER
+BXSLIDER
+SUB MENU
+HEADER
+MAIN MENU
+YOUTUBE LIST
+HOMEPAGE FIXTURE BOX
+SPONSORS
+PAGE STRUCTURE
+BLOG
+COMMENTS
+FORMS
+TABLES
+GALLERY
+OUR TEAM
+FLEX IMAGE
+INFO BOXES
+FOOTER
+FLICKR
+SOCIAL ICONS
+BACK TO TOP BUTTON
+COLORBOX
+POPUP BOXES
+TABS
+MEDIA
+*/
+
+/* === GENERAL STYLES === */
+::-moz-selection {
+    color:#FFF;
+    text-shadow:none;
+    background:#FD91E2;
+}
+::selection {
+    color:#FFF;
+    text-shadow:none;
+    background:#FD91E2;
+}
+body {
+    color:#616161;
+}
+h1, h2, h3, h4, h5, h6 {
+    color:#000;
+}
+p {
+    color:#616161;
+}
+a {
+    color:#FD91E2;
+}
+hr {
+    background-color:#E1E1E1;
+    background:-webkit-linear-gradient(left, #000, #000 30%, #E1E1E1 30%, #E1E1E1);
+}
+blockquote {
+    border-left:3px solid #FD91E2;
+    color:#FFF;
+    background-color:#000;
+}
+/* === FLEXSLIDER === */
+.flex-direction-nav .flex-next {
+    background-color:#000;
+}
+.flex-direction-nav .flex-prev {
+    background-color:#000;
+}
+.flex-direction-nav li a:hover {
+    background-color:#FD91E2;
+}
+.flex-title {
+    background-color:rgba(0, 0, 0, 0.8);
+    color:#FFF;
+}
+.flex-title h1, .flex-title h2, .flex-title h3, .flex-title h4, .flex-title h4, .flex-title h6 {
+    color:#FFF;
+}
+.flex-title p {
+    color:#C7C7C7;
+}
+/* === BXSLIDER ==== */
+.bx-wrapper .bx-pager {
+    color:#616161;
+}
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background:#616161;
+}
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+    background:#000;
+}
+.bx-wrapper .bx-caption {
+    background-color:rgba(0, 0, 0, 0.8);
+}
+/* === SUB MENU  ==== */
+#mobile-menu {
+    background:#FFF;
+    color:#616161 !important;
+    border-bottom:3px solid #000;
+}
+/* === HEADER  ==== */
+#header {
+    background-color:rgba(0, 0, 0, 0.7);
+}
+#header .logo span {
+    color:#FFF;
+    background-color:#FD91E2;
+}
+#header .logo span:after {
+    border-top-color:#FD91E2;
+    border-right-color:#FD91E2;
+}
+/* === MAIN MENU  ==== */
+#mainmenu-container {
+    background:#000;
+}
+.toggleMenu {
+    background:#000;
+    color:#FFF !important;
+    border-bottom:3px solid #FD91E2;
+}
+#mainmenu {
+    background:#000;
+    border-bottom:3px solid #FD91E2;
+}
+#mainmenu a {
+    color:#FFF;
+    background-color:#000;
+}
+#mainmenu a::before {
+    background:#FD91E2;
+}
+#mainmenu ul li a {
+    background-color:#000;
+}
+#mainmenu ul li a::before {
+    background:#FD91E2;
+}
+#mainmenu li li a {
+    background:#000;
+}
+#mainmenu li li li a {
+    background:#000;
+}
+/* === HOMEPAGE FIXTURE BOX ==== */
+.scores-title {
+    background-color:#000;
+    color:#FFF;
+    border-top:0;
+}
+.scores-title:after {
+    border-bottom-color:#000;
+}
+.scores-title:before {
+    border-bottom-color:#FFF;
+}
+.match-results span {
+    background-color:#000;
+    color:#FFF;
+}
+.match-results .score {
+    background-color:#FD91E2;
+}
+.match-place span {
+    background-color:#000;
+    color:#FFF;
+}
+.match-place .red {
+    background-color:#FD91E2;
+}
+.match-place span a {
+    color:#FFF;
+}
+.match-place span a:hover {
+    color:#FFF;
+}
+/* === SPONSORS ==== */
+.logos-title {
+    background-color:#000;
+    color:#FFF;
+}
+/* === PAGE STRUCTURE ==== */
+.pagecontainer {
+    background-color:#FFF;
+    border-top:3px solid #000;
+}
+.pagecontainer:after {
+    border-bottom-color:#FFF;
+}
+.pagecontainer:before {
+    border-bottom-color:#000;
+}
+.transparent-bg {
+    background-color:rgba(255, 255, 255, 0.7);
+}
+.page-title {
+    background-color:#000;
+    color:#FFF;
+}
+.fixresult-title {
+    background-color:#000;
+    color:#FFF;
+    border-top:3px solid #FD91E2;
+}
+/* === BLOG ==== */
+.post figcaption, .post .post-title {
+    background-color:#FD91E2;
+    color:#FFF;
+}
+.post figcaption h2, .post .post-title h2 {
+    color:#FFF;
+}
+.post-date {
+    background-color:#000;
+}
+.sidebarlist li {
+    border-bottom:1px solid #E1E1E1;
+}
+.sidebarlist li a {
+    color:#616161;
+}
+.sidebarlist li a:hover {
+    color:#FD91E2;
+}
+/* === COMMENTS ==== */
+.comments_content {
+    border-top:1px solid #E1E1E1;
+}
+.comments a.reply {
+    color:#616161;
+    background-color:#E1E1E1;
+}
+.comments_content {
+    border-top:1px solid #E1E1E1;
+}
+.comments a.reply {
+    color:#616161;
+    background-color:#E1E1E1;
+}
+.comments a.reply:hover {
+    background-color:#000;
+    color:#FFF;
+}
+/* === FORMS ==== */
+input, textarea {
+    border:1px solid #E1E1E1;
+    color:#000;
+    background-color:#FFF;
+}
+input:focus, textarea:focus {
+    border-color:#000;
+}
+.button {
+    color:#FFF !important;
+    background-color:#000;
+}
+.button:hover {
+    background-color:#FD91E2;
+}
+/* === TABLES ==== */
+.sidebarbox-title h3 {
+    color:#FFF;
+    background-color:#000;
+}
+.fixture-row {
+    border-right:1px solid #E1E1E1;
+    border-left:1px solid #E1E1E1;
+}
+.fixture-row a {
+    color:#616161;
+}
+.fixture-row a:hover div {
+    background-color:#E1E1E1;
+    border-color:#E1E1E1;
+}
+.fixture-row-left, .fixture-row-right {
+    border-bottom:1px solid #E1E1E1;
+}
+.fixture-row-left {
+    border-right:1px solid #E1E1E1;
+}
+/* === GALLERY ==== */
+.filters li a {
+    color:#FFF;
+}
+.filters li a:hover {
+    background-color:#616161;
+}
+.filters li a.active {
+    background-color:#FD91E2;
+}
+.filters {
+    background-color:#000;
+}
+.team-gallery li a {
+    background-color:#FD91E2;
+}
+/* === OUR TEAM ==== */
+.teamlist ul li {
+    border-bottom:1px solid #E1E1E1;
+}
+.teamlist ul li:first-child {
+    border-top:1px solid #E1E1E1;
+}
+.teamlist ul li a {
+    color:#616161;
+}
+.teamlist ul li a:hover {
+    color:#FD91E2;
+}
+.teamlist-popup {
+    background:#FFF;
+}
+/* === FLEX IMAGE ==== */
+.caption-image img {
+    border:3px solid #000;
+}
+.caption-image figcaption {
+    background-color:#000;
+    color:#FFF;
+}
+/* === INFO BOXES ==== */
+.message {
+    background-image:linear-gradient(135deg, rgba(255, 255, 255, .10) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .10) 50%, rgba(255, 255, 255, .10) 75%, transparent 75%, transparent);
+    border-bottom:3px solid #FD91E2;
+}
+.black {
+    background-color:#000;
+}
+.red {
+    background-color:#FD91E2;
+    border-bottom-color:#000;
+}
+.message h5 {
+    color:#FFF;
+}
+.message p {
+    color:#FFF;
+}
+/* === FOOTER ==== */
+#footer {
+    background-color:#000;
+    border-top:3px solid #FD91E2;
+    color:#FFF;
+}
+#footer h5 {
+    color:#FFF;
+}
+#footer-widgets {
+    border-bottom:1px solid rgba(255, 255, 255, 0.1);
+}
+#footer-widgets p {
+    color:#E1E1E1;
+}
+.footer-widget ul li {
+    border-bottom:1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-widget ul li a {
+    color:#E1E1E1;
+}
+.footer-widget ul li a:hover {
+    color:#FFF;
+}
+.credits {
+    color:#E1E1E1;
+}
+/* === FLICKR  ==== */
+.flickr-box li img {
+    border:3px solid rgba(255, 255, 255, 0.3);
+}
+.flickr-box li img:hover {
+    border:3px solid #FFF;
+}
+/* === SOCIAL ICONS ==== */
+.social-icon-fb:hover {
+    background-color:#3b5998;
+}
+.social-icon-tw:hover {
+    background-color:#00aced;
+}
+.social-icon-fl:hover {
+    background-color:#ff0084;
+}
+.social-icon-yt:hover {
+    background-color:#bb0000;
+}
+/* === BACK TO TOP BUTTON ==== */
+.back-to-top {
+    background-color:#000;
+}
+.back-to-top:hover {
+    background-color:#FD91E2;
+}
+/* === COLORBOX ==== */
+#cboxOverlay {
+    background:#262626;
+}
+#cboxContent {
+    background:#616161;
+}
+.cboxIframe {
+    background:#000;
+}
+#cboxError {
+    border:1px solid #C7C7C7;
+}
+#cboxLoadedContent {
+    background:#FFF;
+    background:-moz-linear-gradient(left, #FFF, #FFF 50%, #000 50%, #000);
+    background:-webkit-linear-gradient(left, #FFF, #FFF 50%, #000 50%, #000);
+}
+#cboxLoadingOverlay {
+    background:#FFF;
+}
+#cboxTitle {
+    color:#FFF;
+}
+/* === POPUP BOXES ==== */
+.mfp-bg {
+    background:#000;
+}
+.mfp-preloader {
+    color:#C7C7C7;
+}
+.mfp-preloader a {
+    color:#C7C7C7;
+}
+.mfp-preloader a:hover {
+    color:#FFF;
+}
+.mfp-close {
+    color:#FFF;
+}
+.mfp-close-btn-in .mfp-close {
+    color:#000;
+}
+.mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close {
+    color:#FFF;
+}
+.mfp-counter {
+    color:#C7C7C7;
+}
+.mfp-arrow-left:after, .mfp-arrow-left .mfp-a {
+    border-right:17px solid #FFF;
+}
+.mfp-arrow-left:before, .mfp-arrow-left .mfp-b {
+    border-right:27px solid #3F3F3F;
+}
+.mfp-arrow-right:after, .mfp-arrow-right .mfp-a {
+    border-left:17px solid #FFF;
+}
+.mfp-arrow-right:before, .mfp-arrow-right .mfp-b {
+    border-left:27px solid #3F3F3F;
+}
+.mfp-title {
+    color:#E1E1E1;
+}
+/* === TABS ==== */
+ul.resp-tabs-list {
+    border-bottom:3px solid #FD91E2;
+    background-color:#E1E1E1;
+}
+.resp-tabs-list li {
+    background-color:#E1E1E1;
+}
+.resp-tabs-list li:hover {
+    background-color:#000;
+    color:#FFF;
+}
+.resp-tabs-list li.resp-tab-active {
+    background-color:#000;
+    color:#FFF;
+}
+.resp-tabs-container {
+    background-color:#FFF;
+}
+.resp-tab-active {
+    background-color:#FFF;
+}
+/*-----------Vertical tabs-----------*/
+.resp-vtabs ul.resp-tabs-list {
+    border-right:3px solid #FD91E2;
+}
+.resp-vtabs .resp-tabs-container {
+    background-color:#FFF;
+}
+h2.resp-tab-active {
+    background-color:#000;
+    color:#FFF;
+}
+/* === MEDIA ==== */
+@media only screen and (max-width:768px) {
+    h2.resp-accordion {
+        background-color:#E1E1E1;
+    }
+    h2.resp-tab-active {
+        background-color:#FD91E2;
+        color:#FFF;
+    }
+    h2.resp-accordion:hover {
+        color:#FFF;
+        background-color:#000;
+    }
+}

@@ -1,0 +1,21 @@
+title = "Actualités > Catégorie"
+url = "/news/tag/:slug"
+layout = "main"
+description = "Viewing news posts in a specific category."
+hidden = "0"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = ":slug"
+postsPerPage = "10"
+noPostsMessage = "Aucun billet trouvé."
+sortOrder = "published_at desc"
+categoryPage = "news/category"
+postPage = "news/post"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = "0"
+categoryPage = "news/category"
+==
+{% component 'blogPosts' %}{% component 'blogCategories' %}

@@ -1,0 +1,15 @@
+title = "Accueil"
+url = "/"
+layout = "home"
+description = "Home page"
+hidden = "0"
+
+[blogPosts blogPostsHome]
+pageNumber = "{{ :page }}"
+postsPerPage = "5"
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "news/category"
+postPage = "news/post"
+==
+{% component 'blogPostsHome' %}

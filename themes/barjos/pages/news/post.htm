@@ -1,0 +1,17 @@
+title = "Actualités > Billet"
+url = "/news/:slug"
+layout = "main"
+description = "News Post page"
+hidden = "0"
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "news/category"
+==
+<?php
+function onEnd() {
+    $this->page->title = $this['post']->title;
+}
+?>
+==
+{% component 'blogPost' %}

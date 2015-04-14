@@ -1,0 +1,15 @@
+@charset "utf-8";
+.yt-channel-holder { width:100%; font-size:14px; }
+.yt-channel-holder .yt-channel-list { list-style:none; margin:0; padding:0; }
+.yt-channel-holder .yt-channel-list .yt-channel-video { padding:0; background-color:#E1E1E1; margin: 0 0 10px 0; border:1px solid #000; }
+.yt-channel-holder .yt-channel-list .yt-channel-video:hover { background-color:#333; }
+.yt-channel-holder .yt-channel-list .yt-channel-video a { display:block; overflow:hidden; text-decoration:none; }
+.yt-channel-holder .yt-channel-list .yt-channel-video a .thumb-wrap { position:relative; float:left; height:100px; margin:0 12px 0 0; padding:0; border-right:1px solid #000; }
+.yt-channel-holder .yt-channel-list .yt-channel-video a .thumb-wrap img.vid-thumb { height:100px; }
+.yt-channel-holder .yt-channel-list .yt-channel-video a .thumb-wrap span.vid-duration { position:absolute; bottom:-1px; right:0; padding:2px 4px; font-size:12px; font-weight:bold; background-color:#000; color:#EEE; }
+.yt-channel-holder .yt-channel-list .yt-channel-video a .vid-details { position:relative; width:auto; margin-left:178px; height:100px; color:#616161; padding:6px; }
+.yt-channel-holder .yt-channel-list .yt-channel-video a:hover .vid-details { color:#FFF; }
+.yt-channel-holder .yt-channel-list .yt-channel-video a .vid-details span.vid-title { font-size:14px; }
+.yt-channel-holder .yt-channel-list .yt-channel-video a .vid-details span.vid-views { position:absolute; bottom:5px; right:5px; font-size:12px; }
+.yt-channel-holder .yt-channel-list .yt-channel-video:hover { background-color:#333; }
+.yt-channel-holder .yt-channel-list .yt-channel-video:hover a .vid-details span.vid-title { text-decoration:underline; }

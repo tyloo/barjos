@@ -1,0 +1,302 @@
+description = "Home Layout of the Website"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = "0"
+categoryPage = "account"
+
+[blogPosts blogPostsWidget]
+pageNumber = "{{ :page }}"
+postsPerPage = "5"
+noPostsMessage = "Aucun billet trouvé."
+sortOrder = "published_at desc"
+categoryPage = "news/category"
+postPage = "news/post"
+
+[blogPosts blogPostsSlider]
+pageNumber = "{{ :page }}"
+postsPerPage = "5"
+noPostsMessage = "Aucun billet trouvé."
+sortOrder = "published_at desc"
+categoryPage = "news/category"
+postPage = "news/post"
+==
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{{ this.page.title }} | Les Barjos Rugby Team - Barjos un jour... Barjos toujours !</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=0,width=device-width,height=device-height,initial-scale=1,maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <link href="{{ 'assets/img/favicon.ico'|theme }}" rel="shortcut icon">
+    <link href="{{ 'assets/css/normalize.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/animate.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/flexslider.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/colorbox.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/jquery.bxslider.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/jquery.youtubeChannel.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/nanogallery.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/easy-responsive-tabs.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/style.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/colors.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/media.css'|theme }}" rel="stylesheet">
+
+    <script src="{{ 'assets/js/modernizr.js'|theme }}"></script>
+    <!--[if lt IE 9]><script src="{{ 'assets/js/html5.js'|theme }}"></script><![endif]-->
+</head>
+
+<body>
+<!-- Header -->
+<header id="header">
+    <div class="logo">
+        <img src="{{ 'assets/img/logo-barjos.png'|theme }}" alt="">
+        <span>Barjos un jour... Barjos toujours !</span>
+    </div>
+</header>
+<!-- /Header -->
+
+<!-- Menu -->
+<section id="mainmenu-container">
+    <a class="toggleMenu" href="#">Menu</a>
+    <nav>
+        <ul id="mainmenu">
+            <li class="active"><a href="{{ '/'|app }}"><span>Accueil</span></a></li>
+            <li><a href="{{ '/infos'|app }}"><span>Informations</span></a></li>
+            <li><a href="{{ '/effectif'|app }}"><span>Effectif</span></a></li>
+            <li><a href="{{ '/news'|app }}"><span>Actualités</span></a></li>
+            <li><a href="{{ '/calendrier'|app }}"><span>Calendrier</span></a></li>
+            <li><a href="{{ '/medias'|app }}"><span>Médias</span></a></li>
+            <li><a href="{{ '/boutique'|app }}"><span>Boutique</span></a></li>
+            <li><a href="http://les-barjos.sporteasy.net/" target="_blank"><span>SportEasy</span></a></li>
+        </ul>
+    </nav>
+</section>
+<!-- /Menu -->
+
+<!-- Main Container -->
+<section class="maincontainer">
+    {% component 'blogPostsSlider' %}
+
+    <!-- Fixture Title -->
+    <div class="scores-title">Derniers Matchs</div>
+    <!-- /Fixture Title -->
+
+    <!-- Fixture Slider -->
+    <section class="transparent-bg">
+        <div id="fixture">
+            <div class="slide-content">
+                <div class="match-results">
+                    <span>Les Barjos</span>
+                    <span class="score">vs</span>
+                    <span>ACMB</span>
+                </div>
+                <div class="match-place">
+                    <span>Vendredi 30 juin 2015 à 20h30 - Stade Jean Bouin (Le Blanc-Mesnil)</span>
+                    <span class="red"><a href="#">Détails</a></span>
+                </div>
+            </div>
+            <div class="slide-content">
+                <div class="match-results">
+                    <span>Les Barjos</span>
+                    <span class="score">2 - 1</span>
+                    <span>ACMB</span>
+                </div>
+                <div class="match-place">
+                    <span>Vendredi 30 juin 2015 à 20h30 - Stade Jean Bouin (Le Blanc-Mesnil)</span>
+                    <span class="red"><a href="#">Détails</a></span>
+                </div>
+            </div>
+            <div class="slide-content">
+                <div class="match-results">
+                    <span>Les Barjos</span>
+                    <span class="score">4 - 2</span>
+                    <span>ACMB</span>
+                </div>
+                <div class="match-place">
+                    <span>Vendredi 30 juin 2015 à 20h30 - Stade Jean Bouin (Le Blanc-Mesnil)</span>
+                    <span class="red"><a href="#">Détails</a></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Fixture Slider -->
+
+    <!-- Page Container -->
+    <section class="pagecontainer">
+        <!-- Left Container -->
+        <section class="leftcontainer">
+            {% page %}
+        </section>
+        <!-- /Left Container -->
+
+        <!-- Right Container -->
+        <section class="rightcontainer">
+            <!-- About our team -->
+            <div class="sidebarbox">
+                <h3>Qui sommes-nous ?</h3>
+                <p>
+                    Créé en 2008 par une bande copain, les BARJOS (anciennement les BARJOS DE BAJO) ont, d’abord, sévit sur les terrains de Bagnolet avant
+                    d’échouer à Aulnay Sous Bois en 2009. Fort des statuts de notre association qui est de s’occuper des enfants aux travers des Valeurs
+                    du Rugby, nous nous sommes rapprochés du Rugby Aulnay Club où certains membres du Bureau ont participé à l’encadrement de l’école de Rugby...
+                </p>
+                <p>
+                    En 2014, les Barjos se sont rapproché du Club de Rugby du Blanc-mesnil, où ils ont désormais élu domicile...
+                </p>
+                <a href="{{ '/infos'|app }}">En savoir plus...</a>
+            </div>
+            <!-- /About our team -->
+
+            <!-- Results -->
+            <div class="sidebarbox">
+                <div class="sidebarbox-title">
+                    <h3>Résultats</h3>
+                </div>
+                <div class="fixture-row">
+                    <a href="#">
+                        <div class="fixture-row-left">Les Barjos<div>3</div></div>
+                        <div class="fixture-row-right"><div>1</div>ACMB</div>
+                    </a>
+                    <a href="#">
+                        <div class="fixture-row-left">Les Barjos<div>3</div></div>
+                        <div class="fixture-row-right"><div>1</div>ACMB</div>
+                    </a>
+                    <a href="#">
+                        <div class="fixture-row-left">Les Barjos<div>3</div></div>
+                        <div class="fixture-row-right"><div>1</div>ACMB</div>
+                    </a>
+                    <a href="#">
+                        <div class="fixture-row-left">Les Barjos<div>3</div></div>
+                        <div class="fixture-row-right"><div>1</div>ACMB</div>
+                    </a>
+                    <a href="#">
+                        <div class="fixture-row-left">Les Barjos<div>3</div></div>
+                        <div class="fixture-row-right"><div>1</div>ACMB</div>
+                    </a>
+                    <a href="#">
+                        <div class="fixture-row-left">Les Barjos<div>3</div></div>
+                        <div class="fixture-row-right"><div>1</div>ACMB</div>
+                    </a>
+                    <a href="#">
+                        <div class="fixture-row-left">Les Barjos<div>3</div></div>
+                        <div class="fixture-row-right"><div>1</div>ACMB</div>
+                    </a>
+                    <a href="#">
+                        <div class="fixture-row-left">Les Barjos<div>3</div></div>
+                        <div class="fixture-row-right"><div>1</div>ACMB</div>
+                    </a>
+                </div>
+            </div>
+            <!-- /Results -->
+
+            <!-- Gallery -->
+            <div class="sidebarbox">
+                <div class="sidebarbox-title">
+                    <h3>Gallerie</h3>
+                </div>
+                <ul class="team-gallery">
+                    <li><a class="clb-photo" href="{{ 'assets/img/photos/l1.jpg'|theme }}"><img src="{{ 'assets/img/photos/s1.jpg'|theme }}" alt=""></a></li>
+                    <li><a class="clb-iframe" href="http://www.youtube.com/embed/1iIZeIy7TqM"><img src="{{ 'assets/img/photos/t1.jpg'|theme }}" alt=""></a></li>
+                    <li><a class="clb-photo" href="{{ 'assets/img/photos/l2.jpg'|theme }}"><img src="{{ 'assets/img/photos/s2.jpg'|theme }}" alt=""></a></li>
+                    <li><a class="clb-iframe" href="http://www.dailymotion.com/embed/video/x143vp2"><img src="{{ 'assets/img/photos/t2.jpg'|theme }}" alt=""></a></li>
+                    <li><a class="clb-photo" href="{{ 'assets/img/photos/l3.jpg'|theme }}"><img src="{{ 'assets/img/photos/s3.jpg'|theme }}" alt=""></a></li>
+                    <li><a class="clb-link" href="#"><img src="{{ 'assets/img/photos/t3.jpg'|theme }}" alt=""></a></li>
+                </ul>
+                <a href="#" class="button button-widget">Tout voir</a>
+            </div>
+            <!-- /Gallery -->
+        </section>
+        <!-- Right Container -->
+    </section>
+    <!-- /Page Container -->
+
+    <!-- Sponsors Title -->
+    <div class="logos-title">Sponsors</div>
+    <!-- /Sponsors Title -->
+
+    <!-- Sponsors Slider -->
+    <section class="transparent-bg">
+        <div id="logos">
+            <div class="slide">
+                <a href="#"><img src="{{ 'assets/img/photos/themeforest.png'|theme }}" alt=""></a>
+            </div>
+            <div class="slide">
+                <a href="#"><img src="{{ 'assets/img/photos/codecanyon.png'|theme }}" alt=""></a>
+            </div>
+            <div class="slide">
+                <a href="#"><img src="{{ 'assets/img/photos/photodune.png'|theme }}" alt=""></a>
+            </div>
+            <div class="slide">
+                <a href="#"><img src="{{ 'assets/img/photos/activeden.png'|theme }}" alt=""></a>
+            </div>
+            <div class="slide">
+                <a href="#"><img src="{{ 'assets/img/photos/audiojungle.png'|theme }}" alt=""></a>
+            </div>
+        </div>
+    </section>
+    <!-- Sponsors Slider -->
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div id="footer-widgets">
+            <!-- Widget Last News -->
+            <div class="footer-widget first-clmn">
+                <h5>Dernières actualités</h5>
+                {% component 'blogPostsWidget' %}
+            </div>
+            <!-- /Widget Last News -->
+
+            <!-- Widget Categories -->
+            <div class="footer-widget second-clmn">
+                <h5>Catégories</h5>
+                {% component 'blogCategories' %}
+            </div>
+            <!-- /Widget Categories -->
+
+            <!-- Widget Flickr -->
+            <div class="footer-widget third-clmn">
+                <h5>Photos au hasard</h5>
+                <ul id="cbox" class="flickr-box"></ul>
+            </div>
+            <!-- /Widget Flickr -->
+        </div>
+
+        <!-- Copyright -->
+        <div class="credits">
+            &copy; 2015 Les Barjos Rugby Team. Site créé avec &hearts; par <a href="http://www.tyloo.fr">Julien 'Tyloo' Bonvarlet</a>
+        </div>
+        <!-- /Copyright -->
+
+        <!-- /Social Icons -->
+        <ul class="social-icons">
+            <li><a href="https://www.facebook.com/pages/Les-BARJOS/217862761614820"><img class="social-icon social-icon-fb" src="{{ 'assets/img/social-icons/facebook.png'|theme }}" alt="Facebook"></a></li>
+            <li><a href="https://twitter.com/LesBarjos"><img class="social-icon social-icon-tw" src="{{ 'assets/img/social-icons/twitter.png'|theme }}" alt="Twitter"></a></li>
+            <li><a href="https://www.flickr.com/photos/lesbarjosrugby/"><img class="social-icon social-icon-fl" src="{{ 'assets/img/social-icons/flickr.png'|theme }}" alt="Flickr"></a></li>
+            <li><a href="https://www.youtube.com/user/LesBarjosRugby"><img class="social-icon social-icon-yt" src="{{ 'assets/img/social-icons/youtube.png'|theme }}" alt="YouTube"></a></li>
+        </ul>
+        <!-- /Social Icons -->
+    </footer>
+    <!-- /Footer -->
+
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top"></a>
+    <!-- /Back to top button -->
+</section>
+
+<script src="{{ 'assets/js/jquery.js'|theme }}"></script>
+<script src="{{ 'assets/js/backstretch.js'|theme }}"></script>
+<script src="{{ 'assets/js/jquery.flexslider.js'|theme }}"></script>
+<script src="{{ 'assets/js/jflickrfeed.min.js'|theme }}"></script>
+<script src="{{ 'assets/js/jquery.bxslider.min.js'|theme }}"></script>
+<script src="{{ 'assets/js/jquery.colorbox-min.js'|theme }}"></script>
+<script src="{{ 'assets/js/jquery.nanogallery.js'|theme }}"></script>
+<script src="{{ 'assets/js/jquery.youtubeChannel.js'|theme }}"></script>
+<script src="{{ 'assets/js/easyResponsiveTabs.js'|theme }}"></script>
+<script src="{{ 'assets/js/main.js'|theme }}"></script>
+{% component 'session' %}
+
+</body>
+</html>

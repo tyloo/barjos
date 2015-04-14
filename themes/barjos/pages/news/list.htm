@@ -1,0 +1,15 @@
+title = "Actualités"
+url = "/news"
+layout = "main"
+description = "News list page"
+hidden = "0"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = "10"
+noPostsMessage = "Aucun billet trouvé."
+sortOrder = "published_at desc"
+categoryPage = "news/category"
+postPage = "news/post"
+==
+{% component 'blogPosts' %}
