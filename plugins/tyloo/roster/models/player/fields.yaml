@@ -1,0 +1,91 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+
+    title:
+        label: tyloo.roster::lang.player.title
+        span: left
+        placeholder: tyloo.roster::lang.player.title_placeholder
+
+    slug:
+        label: tyloo.roster::lang.player.slug
+        span: right
+        placeholder: tyloo.roster::lang.player.slug_placeholder
+        preset:
+            field: title
+            type: slug
+
+    toolbar:
+        type: partial
+        path: player_toolbar
+        cssClass: collapse-visible
+
+secondaryTabs:
+    stretch: true
+    fields:
+        content:
+            tab: tyloo.roster::lang.player.tab_edit
+            stretch: true
+            span: left
+            cssClass: field-slim
+            type: codeeditor
+            language: markdown
+            showGutter: false
+            wrapWords: true
+            fontSize: 13
+            margin: 15
+
+        preview:
+            type: Tyloo\Roster\FormWidgets\Preview
+            tab: tyloo.roster::lang.player.tab_edit
+            stretch: true
+            span: right
+            cssClass: field-slim
+
+        firstname:
+            tab: tyloo.roster::lang.player.tab_manage
+            label: tyloo.roster::lang.player.firstname
+            span: left
+            type: text
+
+        lastname:
+            tab: tyloo.roster::lang.player.tab_manage
+            label: tyloo.roster::lang.player.lastname
+            span: left
+            type: text
+
+        slot:
+            tab: tyloo.roster::lang.player.tab_manage
+            label: tyloo.roster::lang.player.slot
+            span: left
+            type: dropdown
+
+        published:
+            tab: tyloo.roster::lang.player.tab_manage
+            label: tyloo.roster::lang.player.published
+            span: left
+            type: checkbox
+
+        published_at:
+            tab: tyloo.roster::lang.player.tab_manage
+            label: tyloo.roster::lang.player.published_on
+            span: left
+            type: datepicker
+            mode: date
+
+        excerpt:
+            tab: tyloo.roster::lang.player.tab_manage
+            label: tyloo.roster::lang.player.excerpt
+            span: left
+            type: textarea
+            size: small
+
+        featured_images:
+            tab: tyloo.roster::lang.player.tab_manage
+            label: tyloo.roster::lang.player.featured_images
+            type: fileupload
+            mode: image
+            imageWidth: 200
+            imageHeight: 200

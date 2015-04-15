@@ -12,6 +12,20 @@ noPostsMessage = "Aucun billet trouvé."
 sortOrder = "published_at desc"
 categoryPage = "news/category"
 postPage = "news/post"
+
+[matchs matchsSlider]
+pageNumber = "{{ :page }}"
+matchsPerPage = "10"
+noMatchsMessage = "Aucun match trouvé."
+sortOrder = "match_date desc"
+matchPage = "match/show"
+
+[matchs matchsWidget]
+pageNumber = "{{ :page }}"
+matchsPerPage = "10"
+noMatchsMessage = "Aucun match trouvé."
+sortOrder = "match_date desc"
+matchPage = "match/show"
 ==
 <!DOCTYPE html>
 <html lang="en">
@@ -59,8 +73,8 @@ postPage = "news/post"
             <li><a href="{{ '/'|app }}"><span>Accueil</span></a></li>
             <li{% if this.page.id == 'infos' %} class="active"{% endif %}><a href="{{ '/infos'|app }}"><span>Informations</span></a></li>
             <li{% if this.page.id == 'effectif' %} class="active"{% endif %}><a href="{{ '/effectif'|app }}"><span>Effectif</span></a></li>
-            <li{% if this.page.id == 'news-list' %} class="active"{% endif %}><a href="{{ '/news'|app }}"><span>Actualités</span></a></li>
-            <li{% if this.page.id == 'calendar' %} class="active"{% endif %}><a href="{{ '/calendrier'|app }}"><span>Calendrier</span></a></li>
+            <li{% if (this.page.id == 'news-list') or (this.page.id == 'news-post') or (this.page.id == 'news-category') %} class="active"{% endif %}><a href="{{ '/news'|app }}"><span>Actualités</span></a></li>
+            <li{% if (this.page.id == 'match-list') or (this.page.id == 'match-show') %} class="active"{% endif %}><a href="{{ '/matchs'|app }}"><span>Calendrier</span></a></li>
             <li{% if this.page.id == 'medias' %} class="active"{% endif %}><a href="{{ '/medias'|app }}"><span>Médias</span></a></li>
             <li{% if this.page.id == 'shop' %} class="active"{% endif %}><a href="{{ '/boutique'|app }}"><span>Boutique</span></a></li>
             <li><a href="http://les-barjos.sporteasy.net/" target="_blank"><span>SportEasy</span></a></li>
@@ -75,45 +89,7 @@ postPage = "news/post"
     <div class="scores-title">Derniers Matchs</div>
     <!-- /Fixture Title -->
 
-    <!-- Fixture Slider -->
-    <section class="transparent-bg">
-        <div id="fixture">
-            <div class="slide-content">
-                <div class="match-results">
-                    <span>Les Barjos</span>
-                    <span class="score">vs</span>
-                    <span>ACMB</span>
-                </div>
-                <div class="match-place">
-                    <span>Vendredi 30 juin 2015 à 20h30 - Stade Jean Bouin (Le Blanc-Mesnil)</span>
-                    <span class="red"><a href="#">Détails</a></span>
-                </div>
-            </div>
-            <div class="slide-content">
-                <div class="match-results">
-                    <span>Les Barjos</span>
-                    <span class="score">2 - 1</span>
-                    <span>ACMB</span>
-                </div>
-                <div class="match-place">
-                    <span>Vendredi 30 juin 2015 à 20h30 - Stade Jean Bouin (Le Blanc-Mesnil)</span>
-                    <span class="red"><a href="#">Détails</a></span>
-                </div>
-            </div>
-            <div class="slide-content">
-                <div class="match-results">
-                    <span>Les Barjos</span>
-                    <span class="score">4 - 2</span>
-                    <span>ACMB</span>
-                </div>
-                <div class="match-place">
-                    <span>Vendredi 30 juin 2015 à 20h30 - Stade Jean Bouin (Le Blanc-Mesnil)</span>
-                    <span class="red"><a href="#">Détails</a></span>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- /Fixture Slider -->
+    {% component 'matchsSlider' %}
 
     <!-- Page Container -->
     <section class="pagecontainer">
@@ -145,40 +121,7 @@ postPage = "news/post"
                 <div class="sidebarbox-title">
                     <h3>Résultats</h3>
                 </div>
-                <div class="fixture-row">
-                    <a href="#">
-                        <div class="fixture-row-left">Les Barjos<div>3</div></div>
-                        <div class="fixture-row-right"><div>1</div>ACMB</div>
-                    </a>
-                    <a href="#">
-                        <div class="fixture-row-left">Les Barjos<div>3</div></div>
-                        <div class="fixture-row-right"><div>1</div>ACMB</div>
-                    </a>
-                    <a href="#">
-                        <div class="fixture-row-left">Les Barjos<div>3</div></div>
-                        <div class="fixture-row-right"><div>1</div>ACMB</div>
-                    </a>
-                    <a href="#">
-                        <div class="fixture-row-left">Les Barjos<div>3</div></div>
-                        <div class="fixture-row-right"><div>1</div>ACMB</div>
-                    </a>
-                    <a href="#">
-                        <div class="fixture-row-left">Les Barjos<div>3</div></div>
-                        <div class="fixture-row-right"><div>1</div>ACMB</div>
-                    </a>
-                    <a href="#">
-                        <div class="fixture-row-left">Les Barjos<div>3</div></div>
-                        <div class="fixture-row-right"><div>1</div>ACMB</div>
-                    </a>
-                    <a href="#">
-                        <div class="fixture-row-left">Les Barjos<div>3</div></div>
-                        <div class="fixture-row-right"><div>1</div>ACMB</div>
-                    </a>
-                    <a href="#">
-                        <div class="fixture-row-left">Les Barjos<div>3</div></div>
-                        <div class="fixture-row-right"><div>1</div>ACMB</div>
-                    </a>
-                </div>
+                {% component 'matchsWidget' %}
             </div>
             <!-- /Results -->
 

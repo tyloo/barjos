@@ -1,0 +1,33 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+
+  title:
+    label: tyloo.match::lang.pages.match.title
+    searchable: true
+
+  # author:
+  #   label: Author
+  #   relation: user
+  #   select: login
+  #   searchable: true
+
+  created_at:
+    label: tyloo.match::lang.pages.match.created
+    type: date
+    invisible: true
+
+  updated_at:
+    label: tyloo.match::lang.pages.match.updated
+    type: date
+    invisible: true
+
+  published_at:
+    label: tyloo.match::lang.pages.match.published
+    type: date
+
+  match_date:
+    label: tyloo.match::lang.pages.match.match_date
+    type: date

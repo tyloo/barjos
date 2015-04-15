@@ -1,0 +1,79 @@
+{% set matchs = __SELF__.matchs %}
+
+<h1>Derniers matchs</h1>
+<hr>
+
+{% for match in matchs %}
+<article class="post">
+    <!-- Match Top (Image and Metadata) -->
+    {% if match.featured_images.0 %}
+    <figure>
+        <a href="{{ match.url }}"><img src="{{ match.featured_images.0.path }}" alt=""></a>
+        <figcaption>
+            <h2>
+                {% if match.match_played == 0 %}
+                    {{ match.team1 }} vs {{ match.team2 }}
+                {% else %}
+                    {{ match.team1 }} {{ match.team1_score }} - {{ match.team2_score }} {{ match.team2 }}
+                {% endif %}
+            </h2>
+            <div class="post-date">
+                {% partial 'date_fr' theDate=match.match_date %} - {{ match.match_location }}
+            </div>
+        </figcaption>
+    </figure>
+    {% else %}
+    <div class="post-title">
+        <a href="{{ match.url }}">
+            <h2>
+                {% if match.match_played == 0 %}
+                {{ match.team1 }} vs {{ match.team2 }}
+                {% else %}
+                {{ match.team1 }} {{ match.team1_score }} - {{ match.team2_score }} {{ match.team2 }}
+                {% endif %}
+            </h2>
+        </a>
+        <div class="post-date">
+            {% partial 'date_fr' theDate=match.match_date %} - {{ match.match_location }}
+        </div>
+    </div>
+    {% endif %}
+    <!-- /Match Top (Image and Metadata) -->
+
+    <!-- Match Content -->
+    {% if match.excerpt %}
+    <p class="excerpt">
+        {{ match.excerpt }}
+    </p>
+    {% else %}
+    <div class="content">
+        {{ match.content_html|raw }}
+    </div>
+    {% endif %}
+    <a href="{{ match.url }}">En savoir plus...</a>
+    <!-- /Match Content -->
+</article>
+<hr>
+{% else %}
+<p>
+    {{ noMatchsMessage }}
+</p>
+{% endfor %}
+
+{% if posts.lastPage > 1 %}
+<ul class="pagination">
+    {% if posts.currentPage > 1 %}
+    <li><a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage-1) }) }}">&larr; Précédent</a></li>
+    {% endif %}
+
+    {% for page in 1..posts.lastPage %}
+    <li class="{{ posts.currentPage == page ? 'active' : null }}">
+        <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+    </li>
+    {% endfor %}
+
+    {% if posts.lastPage > posts.currentPage %}
+    <li><a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage+1) }) }}">Suivant &rarr;</a></li>
+    {% endif %}
+</ul>
+{% endif %}

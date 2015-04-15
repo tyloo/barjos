@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: tyloo.roster::lang.roster.create_player
+form: ~/plugins/tyloo/roster/models/player/fields.yaml
+modelClass: Tyloo\Roster\Models\Player
+defaultRedirect: tyloo/roster/players
+
+create:
+    redirect: tyloo/roster/players/update/:id
+    redirectClose: tyloo/roster/players
+
+update:
+    redirect: tyloo/roster/players
+    redirectClose: tyloo/roster/players

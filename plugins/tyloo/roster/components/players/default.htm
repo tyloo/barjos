@@ -1,0 +1,44 @@
+{% set players = __SELF__.players %}
+
+<h1>Effectif</h1>
+<hr>
+
+{% if players.count > 0 %}
+    <div class="sidebarbox-title">
+        <h3>Avants</h3>
+    </div>
+    <div class="fixture-row">
+        {% for player in players %}
+            {% if player.slot in ['Pillier', 'Talonneur', 'Deuxième ligne', 'Troisième ligne aile', 'Troisième ligne centre', 'Demi de mêlée'] %}
+                <a href="{{ player.url }}">
+                    <div class="fixture-row-left">
+                        {{ player.title }}
+                    </div>
+                    <div class="fixture-row-right">
+                        {{ player.slot }}
+                    </div>
+                </a>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <hr>
+    <div class="sidebarbox-title">
+        <h3>Trois-quarts</h3>
+    </div>
+    {% for player in players %}
+        {% if player.slot in ['Demi d\'ouverture', 'Centre', 'Aillier', 'Arrière'] %}
+            <a href="{{ player.url }}">
+                <div class="fixture-row-left">
+                    {{ player.title }}
+                </div>
+                <div class="fixture-row-right">
+                    {{ player.slot }}
+                </div>
+            </a>
+        {% endif %}
+    {% endfor %}
+{% else %}
+<p>
+    {{ noPlayersMessage }}
+</p>
+{% endif %}

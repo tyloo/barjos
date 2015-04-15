@@ -1,0 +1,35 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+
+  title:
+    label: tyloo.roster::lang.player.title
+    searchable: true
+
+  firstname:
+    label: tyloo.roster::lang.player.firstname
+    searchable: true
+
+  lastname:
+    label: tyloo.roster::lang.player.lastname
+    searchable: true
+
+  slot:
+    label: tyloo.roster::lang.player.slot
+    searchable: true
+
+  created_at:
+    label: tyloo.roster::lang.player.created
+    type: date
+    invisible: true
+
+  updated_at:
+    label: tyloo.roster::lang.player.updated
+    type: date
+    invisible: true
+
+  published_at:
+    label: tyloo.roster::lang.player.published
+    type: date

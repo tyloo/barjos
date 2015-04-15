@@ -1,0 +1,70 @@
+.match-preview-container .preview-content {
+  color: #515c5d;
+  font-family: "Helvetica", sans-serif;
+  line-height: 180%;
+}
+.match-preview-container .preview-content h1,
+.match-preview-container .preview-content h2,
+.match-preview-container .preview-content h3,
+.match-preview-container .preview-content h4,
+.match-preview-container .preview-content h5,
+.match-preview-container .preview-content h6 {
+  margin-top: 20px;
+  font-weight: bold;
+}
+.match-preview-container .preview-content h1:first-child,
+.match-preview-container .preview-content h2:first-child,
+.match-preview-container .preview-content h3:first-child,
+.match-preview-container .preview-content h4:first-child,
+.match-preview-container .preview-content h5:first-child,
+.match-preview-container .preview-content h6:first-child {
+  margin-top: 0;
+}
+.match-preview-container .preview-content *:last-child {
+  margin-bottom: 0;
+}
+.match-preview-container .preview-content h1 {
+  font-size: 30px;
+}
+.match-preview-container .preview-content h2 {
+  font-size: 26px;
+}
+.match-preview-container .preview-content h3 {
+  font-size: 24px;
+}
+.match-preview-container .preview-content h4 {
+  font-size: 22px;
+}
+.match-preview-container .preview-content h5 {
+  font-size: 20px;
+}
+.match-preview-container .preview-content h6 {
+  font-size: 18px;
+}
+.match-preview-container .preview-content p,
+.match-preview-container .preview-content ol,
+.match-preview-container .preview-content ul {
+  font-size: 14px;
+}
+.match-preview-container .preview-content h1,
+.match-preview-container .preview-content h2,
+.match-preview-container .preview-content h3,
+.match-preview-container .preview-content h4,
+.match-preview-container .preview-content h5,
+.match-preview-container .preview-content h6,
+.match-preview-container .preview-content p,
+.match-preview-container .preview-content ol,
+.match-preview-container .preview-content ul {
+  margin-bottom: 15px;
+}
+.match-preview-container .preview-content pre.prettyprint {
+  border-width: 0;
+  padding: 13px 16px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  line-height: 130%;
+}
+.match-preview-container .preview-content img {
+  width: 100%;
+}

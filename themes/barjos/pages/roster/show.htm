@@ -1,0 +1,16 @@
+title = "Joueur"
+url = "/effectif/:slug"
+layout = "main"
+description = "Display a player info."
+hidden = "0"
+
+[player]
+slug = "{{ :slug }}"
+==
+<?php
+function onEnd() {
+    $this->page->title = 'Joueur "' . $this['player']->title . '"';
+}
+?>
+==
+{% component 'player' %}

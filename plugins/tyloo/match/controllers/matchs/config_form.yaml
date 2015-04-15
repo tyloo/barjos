@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: tyloo.match::lang.match.create_match
+form: ~/plugins/tyloo/match/models/match/fields.yaml
+modelClass: Tyloo\Match\Models\Match
+defaultRedirect: tyloo/match/matchs
+
+create:
+    redirect: tyloo/match/matchs/update/:id
+    redirectClose: tyloo/match/matchs
+
+update:
+    redirect: tyloo/match/matchs
+    redirectClose: tyloo/match/matchs

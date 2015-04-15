@@ -1,0 +1,7 @@
+1.0.3:
+    - Added match location.
+1.0.2:
+    - Changed team name type.
+1.0.1:
+    - Initialize plugin.
+    - create_matchs_table.php

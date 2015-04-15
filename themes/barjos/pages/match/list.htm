@@ -1,0 +1,14 @@
+title = "Calendrier des matchs"
+url = "/matchs"
+layout = "main"
+description = "Matchs list page."
+hidden = "0"
+
+[matchs]
+pageNumber = "{{ :page }}"
+matchsPerPage = "10"
+noMatchsMessage = "Aucun match trouvé."
+sortOrder = "match_date desc"
+matchPage = "match/show"
+==
+{% component 'matchs' %}

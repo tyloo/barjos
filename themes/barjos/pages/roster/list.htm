@@ -1,0 +1,14 @@
+title = "Effectif"
+url = "/effectif"
+layout = "main"
+description = "Roster page."
+hidden = "0"
+
+[players]
+pageNumber = "{{ :page }}"
+playersPerPage = "10"
+noPlayersMessage = "Aucun joueur trouvé."
+sortOrder = "title asc"
+playerPage = "roster/show"
+==
+{% component 'players' %}

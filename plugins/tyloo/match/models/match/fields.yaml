@@ -1,0 +1,118 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+
+    title:
+        label: tyloo.match::lang.pages.match.title
+        span: left
+        placeholder: tyloo.match::lang.pages.match.title_placeholder
+
+    slug:
+        label: tyloo.match::lang.pages.match.slug
+        span: right
+        placeholder: tyloo.match::lang.pages.match.slug_placeholder
+        preset:
+            field: title
+            type: slug
+
+    toolbar:
+        type: partial
+        path: match_toolbar
+        cssClass: collapse-visible
+
+secondaryTabs:
+    stretch: true
+    fields:
+        content:
+            tab: tyloo.match::lang.pages.match.tab_edit
+            stretch: true
+            span: left
+            cssClass: field-slim
+            type: codeeditor
+            language: markdown
+            showGutter: false
+            wrapWords: true
+            fontSize: 13
+            margin: 15
+
+        preview:
+            type: Tyloo\Match\FormWidgets\Preview
+            tab: tyloo.match::lang.pages.match.tab_edit
+            stretch: true
+            span: right
+            cssClass: field-slim
+
+        team1:
+            tab: tyloo.match::lang.pages.match.tab_manage
+            label: tyloo.match::lang.pages.match.team1
+            span: left
+            type: text
+
+        team2:
+            tab: tyloo.match::lang.pages.match.tab_manage
+            label: tyloo.match::lang.pages.match.team2
+            span: right
+            type: text
+
+        team1_score:
+            tab: tyloo.match::lang.pages.match.tab_manage
+            label: tyloo.match::lang.pages.match.team1_score
+            span: left
+            type: number
+
+        team2_score:
+            tab: tyloo.match::lang.pages.match.tab_manage
+            label: tyloo.match::lang.pages.match.team2_score
+            span: right
+            type: number
+
+        match_played:
+            tab: tyloo.match::lang.pages.match.tab_manage
+            label: tyloo.match::lang.pages.match.match_played
+            span: left
+            type: checkbox
+
+
+
+        match_date:
+            tab: tyloo.match::lang.pages.match.tab_manage
+            label: tyloo.match::lang.pages.match.match_date
+            span: left
+            type: datepicker
+            mode: date
+
+        published:
+              tab: tyloo.match::lang.pages.match.tab_manage
+              label: tyloo.match::lang.pages.match.published
+              span: left
+              type: checkbox
+
+        published_at:
+            tab: tyloo.match::lang.pages.match.tab_manage
+            label: tyloo.match::lang.pages.match.published_on
+            span: left
+            type: datepicker
+            mode: date
+
+        match_location:
+            tab: tyloo.match::lang.pages.match.tab_manage
+            label: tyloo.match::lang.pages.match.match_location
+            span: left
+            type: text
+
+        excerpt:
+            tab: tyloo.match::lang.pages.match.tab_manage
+            label: tyloo.match::lang.pages.match.excerpt
+            span: left
+            type: textarea
+            size: small
+
+        featured_images:
+            tab: tyloo.match::lang.pages.match.tab_manage
+            label: tyloo.match::lang.pages.match.featured_images
+            type: fileupload
+            mode: image
+            imageWidth: 200
+            imageHeight: 200

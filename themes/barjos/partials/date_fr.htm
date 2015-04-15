@@ -1,0 +1,6 @@
+description = "Display date (full) in french."
+==
+{% set jour = ["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"] %}
+{% set mois = ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"] %}
+
+{{ jour[theDate|date('N') - 1] }} {{ theDate|date('d') }} {{ mois[theDate|date('n') - 1] }} {{ theDate|date('Y') }}

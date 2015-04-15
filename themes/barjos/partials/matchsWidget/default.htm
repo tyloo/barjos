@@ -1,0 +1,32 @@
+{% set matchs = __SELF__.matchs %}
+
+<div class="fixture-row">
+    {% for match in matchs %}
+    <a href="{{ match.url }}">
+        <div class="fixture-row-left">
+            {{ match.team1 }}
+            <div>
+                {% if match.match_played == 0 %}
+                    ?
+                {% else %}
+                    {{ match.team1_score }}
+                {% endif %}
+            </div>
+        </div>
+        <div class="fixture-row-right">
+            <div>
+                {% if match.match_played == 0 %}
+                    ?
+                {% else %}
+                    {{ match.team2_score }}
+                {% endif %}
+            </div>
+            {{ match.team2 }}
+        </div>
+    </a>
+    {% else %}
+    <p>
+        {{ noMatchsMessage }}
+    </p>
+    {% endfor %}
+</div>

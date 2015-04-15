@@ -1,0 +1,62 @@
+{% set match = __SELF__.match %}
+
+<h1>{{ match.title }}</h1>
+<hr>
+
+<article class="post">
+    <!-- Match Top (Image and Metadata) -->
+    {% if match.featured_images.0 %}
+        <figure>
+            <a href="{{ match.url }}"><img src="{{ match.featured_images.0.path }}" alt=""></a>
+            <figcaption>
+                <h2>
+                    {% if match.match_played == 0 %}
+                        {{ match.team1 }} vs {{ match.team2 }}
+                    {% else %}
+                        {{ match.team1 }} {{ match.team1_score }} - {{ match.team2_score }} {{ match.team2 }}
+                    {% endif %}
+                </h2>
+                <div class="post-date">
+                    {% partial 'date_fr' theDate=match.match_date %} - {{ match.match_location }}
+                </div>
+            </figcaption>
+        </figure>
+    {% else %}
+        <div class="post-title">
+            <a href="{{ match.url }}">
+                <h2>
+                    {% if match.match_played == 0 %}
+                        {{ match.team1 }} vs {{ match.team2 }}
+                    {% else %}
+                        {{ match.team1 }} {{ match.team1_score }} - {{ match.team2_score }} {{ match.team2 }}
+                    {% endif %}
+                </h2>
+            </a>
+            <div class="post-date">
+                {% partial 'date_fr' theDate=match.match_date %} - {{ match.match_location }}
+            </div>
+        </div>
+    {% endif %}
+    <!-- /Match Top (Image and Metadata) -->
+
+    <!-- Match Content -->
+    <div class="content">
+        {{ match.content_html|raw }}
+    </div>
+    <!-- /Match Content -->
+</article>
+<hr>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'lesbarjos';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>

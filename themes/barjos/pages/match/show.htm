@@ -1,0 +1,16 @@
+title = "Match"
+url = "/match/:slug"
+layout = "main"
+description = "Match details"
+hidden = "0"
+
+[match]
+slug = "{{ :slug }}"
+==
+<?php
+function onEnd() {
+    $this->page->title = 'Match "' . $this['match']->title . '"';
+}
+?>
+==
+{% component 'match' %}
