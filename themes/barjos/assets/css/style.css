@@ -785,6 +785,12 @@ textarea {
     text-align:right;
 }
 
+.fixture-row-full {
+    padding:10px;
+    width:100%;
+    height:40px;
+}
+
 /* === GALLERY ==== */
 .filters {
     list-style:none;
