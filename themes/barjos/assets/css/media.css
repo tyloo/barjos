@@ -10,7 +10,7 @@
     #mainmenu-container {
         position: fixed;
         top: 0;
-        z-index: 1000;
+        z-index: 10000;
     }
     #mobile-menu {
         background-image:url("../img/downArrow2.png");
