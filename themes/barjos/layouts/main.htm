@@ -72,7 +72,7 @@ matchPage = "match/show"
         <ul id="mainmenu">
             <li><a href="{{ '/'|app }}"><span>Accueil</span></a></li>
             <li{% if this.page.id == 'infos' %} class="active"{% endif %}><a href="{{ '/infos'|app }}"><span>Informations</span></a></li>
-            <li{% if this.page.id == 'effectif' %} class="active"{% endif %}><a href="{{ '/effectif'|app }}"><span>Effectif</span></a></li>
+            <li{% if (this.page.id == 'roster-list') or (this.page.id == 'roster-show') %} class="active"{% endif %}><a href="{{ '/effectif'|app }}"><span>Effectif</span></a></li>
             <li{% if (this.page.id == 'news-list') or (this.page.id == 'news-post') or (this.page.id == 'news-category') %} class="active"{% endif %}><a href="{{ '/news'|app }}"><span>Actualités</span></a></li>
             <li{% if (this.page.id == 'match-list') or (this.page.id == 'match-show') %} class="active"{% endif %}><a href="{{ '/matchs'|app }}"><span>Calendrier</span></a></li>
             <li{% if this.page.id == 'medias' %} class="active"{% endif %}><a href="{{ '/medias'|app }}"><span>Médias</span></a></li>
