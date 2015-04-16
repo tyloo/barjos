@@ -3,15 +3,6 @@
         display:none !important;
     }
 }
-@media only screen and (max-width:1024px) {
-    .fixture-row-left, .fixture-row-right {
-        width:100%;
-    }
-    .fixture-row-left {
-        border-right:none;
-        border-bottom-style:dashed;
-    }
-}
 @media only screen and (max-width:900px) {
     #mobile-menu {
         background-image:url("../img/downArrow2.png");
