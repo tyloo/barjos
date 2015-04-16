@@ -97,6 +97,9 @@
         float:none;
         padding-left:0px;
     }
+    .sidebarbox {
+        width:100%;
+    }
     .first-clmn, .second-clmn, .third-clmn {
         padding:0px 0px 30px 0px;
         width:100%;
