@@ -4,6 +4,14 @@
     }
 }
 @media only screen and (max-width:900px) {
+    body {
+        margin-top: 57px;
+    }
+    #mainmenu-container {
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+    }
     #mobile-menu {
         background-image:url("../img/downArrow2.png");
         background-repeat:no-repeat;
