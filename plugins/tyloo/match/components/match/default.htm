@@ -7,7 +7,7 @@
     <!-- Match Top (Image and Metadata) -->
     {% if match.featured_images.0 %}
         <figure>
-            <a href="{{ match.url }}"><img src="{{ match.featured_images.0.path }}" alt=""></a>
+            <img src="{{ match.featured_images.0.path }}" alt="">
             <figcaption>
                 <h2>
                     {% if match.match_played == 0 %}
@@ -23,15 +23,13 @@
         </figure>
     {% else %}
         <div class="post-title">
-            <a href="{{ match.url }}">
-                <h2>
-                    {% if match.match_played == 0 %}
-                        {{ match.team1 }} vs {{ match.team2 }}
-                    {% else %}
-                        {{ match.team1 }} {{ match.team1_score }} - {{ match.team2_score }} {{ match.team2 }}
-                    {% endif %}
-                </h2>
-            </a>
+            <h2>
+                {% if match.match_played == 0 %}
+                    {{ match.team1 }} vs {{ match.team2 }}
+                {% else %}
+                    {{ match.team1 }} {{ match.team1_score }} - {{ match.team2_score }} {{ match.team2 }}
+                {% endif %}
+            </h2>
             <div class="post-date">
                 {% partial 'date_fr' theDate=match.match_date %} - {{ match.match_location }}
             </div>
