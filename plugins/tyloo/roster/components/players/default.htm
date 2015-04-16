@@ -5,11 +5,83 @@
 
 {% if players.count > 0 %}
     <div class="sidebarbox-title">
-        <h3>Avants</h3>
+        <h3>Coach(s)</h3>
     </div>
     <div class="fixture-row">
         {% for player in players %}
-            {% if player.slot in ['Pillier', 'Talonneur', 'Deuxième ligne', 'Troisième ligne aile', 'Troisième ligne centre', 'Demi de mêlée'] %}
+            {% if player.slot  == 'Coach' %}
+                <a href="{{ player.url }}">
+                    <div class="fixture-row-left">
+                        {{ player.title }}
+                    </div>
+                    <div class="fixture-row-right">
+                        {{ player.slot }}
+                    </div>
+                </a>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <hr>
+    <div class="sidebarbox-title">
+        <h3>Première ligne</h3>
+    </div>
+    <div class="fixture-row">
+        {% for player in players %}
+            {% if player.slot  == 'Première ligne' %}
+                <a href="{{ player.url }}">
+                    <div class="fixture-row-left">
+                        {{ player.title }}
+                    </div>
+                    <div class="fixture-row-right">
+                        {{ player.slot }}
+                    </div>
+                </a>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <hr>
+    <div class="sidebarbox-title">
+        <h3>Deuxième ligne</h3>
+    </div>
+    <div class="fixture-row">
+        {% for player in players %}
+            {% if player.slot  == 'Deuxième ligne' %}
+                <a href="{{ player.url }}">
+                    <div class="fixture-row-left">
+                        {{ player.title }}
+                    </div>
+                    <div class="fixture-row-right">
+                        {{ player.slot }}
+                    </div>
+                </a>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <hr>
+    <div class="sidebarbox-title">
+        <h3>Troisième ligne</h3>
+    </div>
+    <div class="fixture-row">
+        {% for player in players %}
+            {% if player.slot == 'Troisième ligne' %}
+                <a href="{{ player.url }}">
+                    <div class="fixture-row-left">
+                        {{ player.title }}
+                    </div>
+                    <div class="fixture-row-right">
+                        {{ player.slot }}
+                    </div>
+                </a>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <hr>
+    <div class="sidebarbox-title">
+        <h3>Charnière</h3>
+    </div>
+    <div class="fixture-row">
+        {% for player in players %}
+            {% if player.slot == 'Charnière' %}
                 <a href="{{ player.url }}">
                     <div class="fixture-row-left">
                         {{ player.title }}
@@ -25,20 +97,40 @@
     <div class="sidebarbox-title">
         <h3>Trois-quarts</h3>
     </div>
-    {% for player in players %}
-        {% if player.slot in ['Demi d\'ouverture', 'Centre', 'Aillier', 'Arrière'] %}
-            <a href="{{ player.url }}">
-                <div class="fixture-row-left">
-                    {{ player.title }}
-                </div>
-                <div class="fixture-row-right">
-                    {{ player.slot }}
-                </div>
-            </a>
-        {% endif %}
-    {% endfor %}
+    <div class="fixture-row">
+        {% for player in players %}
+            {% if player.slot == 'Trois-quarts' %}
+                <a href="{{ player.url }}">
+                    <div class="fixture-row-left">
+                        {{ player.title }}
+                    </div>
+                    <div class="fixture-row-right">
+                        {{ player.slot }}
+                    </div>
+                </a>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <hr>
+    <div class="sidebarbox-title">
+        <h3>Arrière</h3>
+    </div>
+    <div class="fixture-row">
+        {% for player in players %}
+            {% if player.slot == 'Arrière' %}
+                <a href="{{ player.url }}">
+                    <div class="fixture-row-left">
+                        {{ player.title }}
+                    </div>
+                    <div class="fixture-row-right">
+                        {{ player.slot }}
+                    </div>
+                </a>
+            {% endif %}
+        {% endfor %}
+    </div>
 {% else %}
-<p>
-    {{ noPlayersMessage }}
-</p>
+    <p>
+        {{ noPlayersMessage }}
+    </p>
 {% endif %}

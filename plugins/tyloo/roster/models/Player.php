@@ -175,15 +175,12 @@ class Player extends Model
     public function getSlotOptions()
     {
         return [
-            'Pillier' => 'Pillier',
-            'Talonneur' => 'Talonneur',
+            'Coach' => 'Coach',
+            'Première ligne' => 'Première ligne',
             'Deuxième ligne' => 'Deuxième ligne',
-            'Troisième ligne aile' => 'Troisième ligne aile',
-            'Troisième ligne centre' => 'Troisième ligne centre',
-            'Demi de mêlée' => 'Demi de mêlée',
-            'Demi d\'ouverture' => 'Demi d\'ouverture',
-            'Centre' => 'Centre',
-            'Aillier' => 'Aillier',
+            'Troisième ligne' => 'Troisième ligne',
+            'Charnière' => 'Charnière',
+            'Trois-quarts' => 'Trois-quarts',
             'Arrière' => 'Arrière',
         ];
     }
