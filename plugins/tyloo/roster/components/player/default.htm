@@ -1,6 +1,45 @@
 {% set player = __SELF__.player %}
 
-<h1>{{ player.title }}</h1>
+<article class="post">
+    <!-- Post Top (Image and Metadata) -->
+    {% if player.featured_images.0 %}
+    <figure>
+        <img src="{{ player.featured_images.0.path }}" alt="">
+        <figcaption>
+            <h2>{{ player.firstname }} ' {{ player.title }} ' {{ player.lastname }}</h2>
+            <div class="post-date">
+                {{ player.slot }}
+            </div>
+        </figcaption>
+    </figure>
+    {% else %}
+    <div class="post-title">
+        <h2>{{ player.firstname }} ' {{ player.title }} ' {{ player.lastname }}</h2>
+        <div class="post-date">
+            {{ player.slot }}
+        </div>
+    </div>
+    {% endif %}
+    <!-- /Post Top (Image and Metadata) -->
+
+    <!-- Post Content -->
+    <div class="content">
+        {{ player.content_html|raw }}
+    </div>
+    <!-- /Post Content -->
+</article>
 <hr>
 
-Description du joueur (bientôt...)
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'lesbarjos';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
