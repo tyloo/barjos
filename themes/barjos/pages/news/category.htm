@@ -3,11 +3,13 @@ url = "/news/tag/:slug"
 layout = "main"
 description = "Viewing news posts in a specific category."
 hidden = "0"
+robot_index = "index"
+robot_follow = "follow"
 
 [blogPosts]
 pageNumber = "{{ :page }}"
 categoryFilter = ":slug"
-postsPerPage = "10"
+postsPerPage = "5"
 noPostsMessage = "Aucun billet trouvé."
 sortOrder = "published_at desc"
 categoryPage = "news/category"
@@ -18,4 +20,4 @@ slug = "{{ :slug }}"
 displayEmpty = "0"
 categoryPage = "news/category"
 ==
-{% component 'blogPosts' %}{% component 'blogCategories' %}
+{% component 'blogPosts' %}
