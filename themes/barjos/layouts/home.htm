@@ -74,6 +74,7 @@ matchPage = "match/show"
             <li><a href="{{ '/infos'|app }}"><span>Informations</span></a></li>
             <li><a href="{{ '/effectif'|app }}"><span>Effectif</span></a></li>
             <li><a href="{{ '/news'|app }}"><span>Actualités</span></a></li>
+            <li><a href="{{ '/forum'|app }}"><span>Forum</span></a></li>
             <li><a href="{{ '/matchs'|app }}"><span>Calendrier</span></a></li>
             <li><a href="{{ '/medias'|app }}"><span>Médias</span></a></li>
             <li><a href="{{ '/boutique'|app }}"><span>Boutique</span></a></li>
@@ -225,7 +226,6 @@ matchPage = "match/show"
 <script src="{{ 'assets/js/jquery.youtubeChannel.js'|theme }}"></script>
 <script src="{{ 'assets/js/easyResponsiveTabs.js'|theme }}"></script>
 <script src="{{ 'assets/js/main.js'|theme }}"></script>
-{% component 'session' %}
-
+{% partial 'Piwik' %}
 </body>
 </html>

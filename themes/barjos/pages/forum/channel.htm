@@ -1,0 +1,14 @@
+title = "Forum Channel"
+url = "/forum/channel/:slug"
+layout = "main"
+description = "Channel Page."
+hidden = "0"
+robot_index = "index"
+robot_follow = "follow"
+
+[forumChannel]
+slug = "{{ :slug }}"
+memberPage = "forum/index"
+topicPage = "forum/index"
+==
+{% component 'forumChannel' %}

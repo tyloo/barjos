@@ -74,6 +74,7 @@ matchPage = "match/show"
             <li{% if this.page.id == 'infos' %} class="active"{% endif %}><a href="{{ '/infos'|app }}"><span>Informations</span></a></li>
             <li{% if (this.page.id == 'roster-list') or (this.page.id == 'roster-show') %} class="active"{% endif %}><a href="{{ '/effectif'|app }}"><span>Effectif</span></a></li>
             <li{% if (this.page.id == 'news-list') or (this.page.id == 'news-post') or (this.page.id == 'news-category') %} class="active"{% endif %}><a href="{{ '/news'|app }}"><span>Actualités</span></a></li>
+            <li{% if this.page.id == 'forum-index' %} class="active"{% endif %}><a href="{{ '/forum'|app }}"><span>Forum</span></a></li>
             <li{% if (this.page.id == 'match-list') or (this.page.id == 'match-show') %} class="active"{% endif %}><a href="{{ '/matchs'|app }}"><span>Calendrier</span></a></li>
             <li{% if this.page.id == 'medias' %} class="active"{% endif %}><a href="{{ '/medias'|app }}"><span>Médias</span></a></li>
             <li{% if this.page.id == 'shop' %} class="active"{% endif %}><a href="{{ '/boutique'|app }}"><span>Boutique</span></a></li>
@@ -213,7 +214,6 @@ matchPage = "match/show"
 <script src="{{ 'assets/js/jquery.youtubeChannel.js'|theme }}"></script>
 <script src="{{ 'assets/js/easyResponsiveTabs.js'|theme }}"></script>
 <script src="{{ 'assets/js/main.js'|theme }}"></script>
-
-
+{% partial 'Piwik' %}
 </body>
 </html>
